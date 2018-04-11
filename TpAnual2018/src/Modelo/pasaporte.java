@@ -1,5 +1,9 @@
+
 package Modelo;
 
-public class pasaporte {
+import java.util.Date;
 
-}
+public class pasaporte {
+ 	private String Nro,pai,autori,;
+ 	private Date fecEmi,fecVen
+ 	
