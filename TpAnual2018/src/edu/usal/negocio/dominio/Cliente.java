@@ -9,10 +9,20 @@ public class Cliente {
 	private Date fecNac;
 	private Telefono tel;
 	private PasajeroFrecuente pf;
+	private Direccion dir;
 	
+
 	public Cliente() {
 	}
-	 
+	
+	public Direccion getDir() {
+		return dir;
+	}
+
+	public void setDir(Direccion dir) {
+		this.dir = dir;
+	}
+	
 	public Telefono getTel() {
 		return tel;
 	}
@@ -61,7 +71,7 @@ public class Cliente {
 	public void setFecNac(Date fecNac) {
 		this.fecNac = fecNac;
 	}
-	public Cliente(String nombre, String apellido, String dni, String cuit, String email, Date fecNac, Telefono tel, PasajeroFrecuente pf) {
+	public Cliente(String nombre, String apellido, String dni, String cuit, String email, Date fecNac, Telefono tel, PasajeroFrecuente pf, Direccion dir) {
 		
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -71,6 +81,7 @@ public class Cliente {
 		this.fecNac = fecNac;
 		this.tel = tel;
 		this.pf = pf;
+		this.dir = dir;
 	}
 	 
 }

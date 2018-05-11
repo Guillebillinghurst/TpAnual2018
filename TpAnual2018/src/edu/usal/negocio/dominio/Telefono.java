@@ -7,6 +7,7 @@ public class Telefono {
 	
 	public Telefono() {
 	}
+	
 	public String getPersonal() {
 		return personal;
 	}

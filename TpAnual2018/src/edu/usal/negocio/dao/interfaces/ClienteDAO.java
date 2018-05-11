@@ -6,9 +6,10 @@ import edu.usal.negocio.dominio.Cliente;
 
 public interface ClienteDAO {
 	
-	public void addPabellon(Cliente cliente) throws FileNotFoundException, IOException;
-	public void updatePabellon(Cliente cliente)throws FileNotFoundException, IOException;
-	public void deletePabellon(Cliente cliente)throws FileNotFoundException, IOException;
+	public void addCliente(Cliente cliente) throws FileNotFoundException, IOException;
+	public void updateCliente(Cliente cliente)throws FileNotFoundException, IOException;
+	public void deleteCliente(Cliente cliente)throws FileNotFoundException, IOException;
 	public List<Cliente> getAllCliente()throws FileNotFoundException, IOException;
-	
+	static void ClienteToString(Cliente cliente){}
+	static void StringToCliente(String strCliente){}
 }
