@@ -1,5 +1,7 @@
 package edu.usal.negocio.dao.factory;
 
+import edu.usal.negocio.dao.implementacion.LineaAereaDAOImplFileString;
+import edu.usal.negocio.dao.implementacion.LineaAereaDAOImplFileStream;
 import edu.usal.negocio.dao.interfaces.LineaAereaDAO;
 
 public class LineaAereaFactory {
@@ -7,7 +9,7 @@ public class LineaAereaFactory {
 		if(datasource.equals("fileString")){
 			return new LineaAereaDAOImplFileString();
 		}else if(datasource.equals("fileStream")){
-			return new LineaAereaImplFileStream();
+			return new LineaAereaDAOImplFileStream();
 		}
 		return null;
 	}

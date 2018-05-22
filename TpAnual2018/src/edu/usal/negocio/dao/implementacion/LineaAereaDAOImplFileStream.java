@@ -1,4 +1,4 @@
-package edu.usal.negocio.dao.factory;
+package edu.usal.negocio.dao.implementacion;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.List;
 import edu.usal.negocio.dao.interfaces.LineaAereaDAO;
 import edu.usal.negocio.dominio.LineaAerea;
 
-public class LineaAereaDAOImplFileString implements LineaAereaDAO {
+public class LineaAereaDAOImplFileStream implements LineaAereaDAO {
 
 	public void addLineaAerea(LineaAerea la) throws FileNotFoundException, IOException {
 		// TODO Auto-generated method stub
