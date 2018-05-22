@@ -2,7 +2,7 @@ package edu.usal.negocio.dominio;
 
 public class Direccion {
 	
-	String Calle, Altura, Ciudad, CodigoPostal, Pais, Provincia;
+	private String Calle, Altura, Ciudad, CodigoPostal, Pais, Provincia;
 
 	public String getCalle() {
 		return Calle;

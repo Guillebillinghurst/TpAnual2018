@@ -2,7 +2,7 @@ package edu.usal.negocio.dominio;
 
 public class PasajeroFrecuente {
 	
-	String numero,categoria;
+	private String numero,categoria;
 
 	public PasajeroFrecuente() {
 	}
