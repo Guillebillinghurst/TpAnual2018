@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 import edu.usal.negocio.dao.interfaces.*;
 import edu.usal.negocio.dominio.*;
+import edu.usal.util.PropertiesUtil;
 
 
 public class ClienteDAOImplFileString implements ClienteDAO{
@@ -22,13 +23,12 @@ public class ClienteDAOImplFileString implements ClienteDAO{
 	
 
 	public void addCliente(Cliente cliente) throws FileNotFoundException, IOException {
-		file = new File("C:\\Archivos\\Clientes.dat");
+		file = new File(PropertiesUtil.getPathCliente());
 		fw = new FileWriter(file, true);
 		bw = new BufferedWriter(fw);
-		bw.write(this.ClienteToString(cliente));
+		bw.write(ClienteDAOImplFileString.ClienteToString(cliente));
 		bw.close();
 	}
-
 
 	public void updateCliente(Cliente cliente) throws FileNotFoundException, IOException {
 		
@@ -36,13 +36,14 @@ public class ClienteDAOImplFileString implements ClienteDAO{
 
 	
 	public void deleteCliente(Cliente cliente) throws FileNotFoundException, IOException {
-		
+	
 	}
+	
 
 	@Override
 	public List<Cliente> getAllCliente() throws FileNotFoundException, IOException {
 		List<Cliente> list = new ArrayList<Cliente>();
-		file = new File("C:\\Archivos\\Clientes.dat");
+		file = new File(PropertiesUtil.getPathCliente());
 		sc = new Scanner(file);
 		while(sc.hasNextLine()){
 			list.add(StringToCliente(sc.nextLine()));
