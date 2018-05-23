@@ -65,7 +65,7 @@ public class ClienteDAOImplFileString implements ClienteDAO{
 		cliente.setApellido(straux[2]);
 		cliente.setCuit(straux[3]);
 		cliente.setEmail(straux[4]);
-		cliente.setFecNac(Date.valueOf(straux[5]));
+		cliente.setFecNac(Date.valueOf(straux[5])); //MAL
 		Telefono tel = new Telefono((straux[6]),straux[7],straux[8]);
 		cliente.setTel(tel);
 		PasajeroFrecuente pf = new PasajeroFrecuente(straux[9],straux[10]);
