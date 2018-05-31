@@ -12,6 +12,9 @@ import java.util.List;
 
 import edu.usal.negocio.dao.interfaces.ClienteDAO;
 import edu.usal.negocio.dominio.Cliente;
+import edu.usal.negocio.dto.Pabellon;
+import edu.usal.util.FileInputOuput;
+import edu.usal.util.FileInputOutput;
 import edu.usal.util.PropertiesUtil;
 
 
@@ -25,7 +28,7 @@ public class ClienteDAOImplFileStream implements ClienteDAO {
 
 		public void addCliente(Cliente cliente) throws FileNotFoundException, IOException {
 		//creamos una archivo y lo guardamos en una lista
-			List<Cliente> lista = new ArrayList<Cliente>();
+			ArrayList<Cliente> lista = new ArrayList<Cliente>();
 			this.file = new File(PropertiesUtil.getPathCliente());
 			this.fileOut = new FileOutputStream(this.file, true);
 			this.objOut = new ObjectOutputStream(fileOut);
@@ -41,11 +44,11 @@ public class ClienteDAOImplFileStream implements ClienteDAO {
 
 	}
 
-	@Override
-	public List<Cliente> getAllCliente() throws FileNotFoundException, IOException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/*	public ArrayList<Cliente> getAllClientes() {
+		FileInputOutput objUtil = new FileInputOutput(PropertiesUtil.getPathCliente());
+		return (ArrayList<Cliente>)objUtil.getListaByArchivo();		
+	}*/
+	
 
 public List<Cliente> getAllClientes() throws FileNotFoundException, IOException { //Leemos la lista que creamos en el add
 		
